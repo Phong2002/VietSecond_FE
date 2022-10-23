@@ -8,7 +8,7 @@ import Order from './component/body/order/Order.js'
 import Chat from './component/body/chat/Chat';
 import Inventory from './component/body/inventory/Inventory.js'
 import Post from './component/body/post/Post.js'
-import Error from './component/Error/Error'
+import Error from './component/error/Error.js'
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
             <Route path="post" element={<Post />}></Route>
           </Route>
         </Route>
-        <Route path="" element={<Error />}></Route>
+        <Route path="error" element={<Error />}></Route>
       </Routes>
     </div>
   );

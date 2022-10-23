@@ -11,23 +11,24 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import Home from '../body/home/Home.js'
 import { Outlet } from 'react-router-dom';
-
+import ClickAwayListener from '@mui/base/ClickAwayListener';
+import Notification from '../body/notification/Notification.js'
+import Box from '@mui/material/Box';
 import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-  useNavigate
-  } from "react-router-dom";
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useNavigate
+} from "react-router-dom";
 
 
 function Header() {
     const [nav, setNav] = useState('')
     const [inputSearch, setInputSearch] = useState('')
     const [placeholder, setPlaceholder] = useState('Tất cả danh mục')
-
+    const [isOpenNoti, setIsOpenNoti] = useState(false)
     let navigate = useNavigate();
 
 
@@ -40,12 +41,17 @@ function Header() {
                 <div className="nav-container">
                     <div className="nav">
                         <ul>
-                            <li><Button startIcon={<HomeIcon />} onClick={()=>navigate("/")} >Trang chủ</Button></li>
-                            <li><Button startIcon={<LuggageIcon />}  onClick={()=>navigate("/inventory")} >Kho đồ</Button></li>
-                            <li><Button startIcon={<ShoppingBagIcon />} onClick={()=>navigate("/order")} >Đơn hàng</Button></li>
-                            <li><Button startIcon={<FlagIcon />} onClick={()=>navigate("/")} >Tin của tôi</Button></li>
-                            <li><Button startIcon={<NotificationsIcon />}>Thông báo</Button></li>
-                            <li><Button startIcon={<EmailIcon />} onClick={()=>navigate("/chat")} >Tin nhắn</Button></li>
+                            <li><Button startIcon={<HomeIcon />} onClick={() => navigate("/")} >Trang chủ</Button></li>
+                            <li><Button startIcon={<LuggageIcon />} onClick={() => navigate("/inventory")} >Kho đồ</Button></li>
+                            <li><Button startIcon={<ShoppingBagIcon />} onClick={() => navigate("/order")} >Đơn hàng</Button></li>
+                            <li><Button startIcon={<FlagIcon />} onClick={() => navigate("/")} >Tin của tôi</Button></li>
+                            <li className="noti">
+                                <ClickAwayListener onClickAway={()=>setIsOpenNoti(false)}>
+                                    <Box><Button startIcon={<NotificationsIcon />} onClick={()=>setIsOpenNoti(!isOpenNoti)}>Thông báo</Button>
+                                    {isOpenNoti?<Notification/>:null}</Box>
+                                </ClickAwayListener>
+                            </li>
+                            <li><Button startIcon={<EmailIcon />} onClick={() => navigate("/chat")} >Tin nhắn</Button></li>
                         </ul>
                     </div>
                     <div className="sub-nav">
@@ -56,10 +62,10 @@ function Header() {
                             </div>
                         </div>
                         <div className="cash">
-                            <Button startIcon={<ShoppingCartIcon />} onClick={()=>navigate("/cart")} >Giỏ hàng</Button>
+                            <Button startIcon={<ShoppingCartIcon />} onClick={() => navigate("/cart")} >Giỏ hàng</Button>
                         </div>
                         <div className="post">
-                            <Button variant="contained" startIcon={<PostAddIcon />} color="secondary" onClick={()=>navigate("/post")} >Đăng tin</Button>
+                            <Button variant="contained" startIcon={<PostAddIcon />} color="secondary" onClick={() => navigate("/post")} >Đăng tin</Button>
                         </div>
                     </div>
                 </div>
