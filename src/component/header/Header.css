@@ -1,0 +1,101 @@
+.screen{
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-evenly;
+    background-color:#7ED958;
+    padding: 0 15%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo>img {
+    height: 100%
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.nav-container>.nav>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-container>.nav>ul {
+    list-style-type: none;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: #000000 !important
+}
+
+.input-search {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-search>input {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px solid;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.input-search>div {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    padding: 0 10px;
+    width: 50px;
+    color: #7ED958;
+}
+
+.input-search>input:focus {
+    outline: none;
+}
+
+.input-search>div:hover {
+    cursor: pointer;
+}
+
+.input-search>div:hover>svg {
+    font-size: 35px;
+
+}
+
+.sub-nav {
+    display: flex;
+    flex-direction: row
+}
+
+.post .css-zcbmsk-MuiButtonBase-root-MuiButton-root {
+    background-color: yellow;
+    color: black
+}
+
+.post .css-zcbmsk-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: rgb(255, 203, 14);
+    color: black
+}
+
+.container>.user {
+    display: flex;
+    align-items: center;
+}

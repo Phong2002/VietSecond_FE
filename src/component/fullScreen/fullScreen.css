@@ -1,0 +1,12 @@
+.fullScreen {
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url("https://img.freepik.com/free-vector/green-curve-frame-template-vector_53876-144370.jpg?w=2000");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
