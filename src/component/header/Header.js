@@ -11,56 +11,65 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import Home from '../body/Home/Home.js'
+import Home from '../body/home/Home.js'
+import { Outlet } from 'react-router-dom';
+
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link,
+  useNavigate
+  } from "react-router-dom";
 
 
 function Header() {
     const [nav, setNav] = useState('')
     const [inputSearch, setInputSearch] = useState('')
     const [placeholder, setPlaceholder] = useState('Tất cả danh mục')
+
+    let navigate = useNavigate();
+
+
     return (
         <div className="screen">
-        <div className="container">
-            <div className="logo">
-                <img src="https://cdn.discordapp.com/attachments/1009450253537247274/1031370541375955034/vietsecond.jpg" ></img>
-            </div>
-            <div className="nav-container">
-                <div className="nav">
-                    <ul>
-                        <li><Button startIcon={<HomeIcon />}>Trang chủ</Button></li>
-                        <li><Button startIcon={<LuggageIcon />}>Kho đồ</Button></li>
-                        <li><Button startIcon={<ShoppingBagIcon />}>Đơn hàng</Button></li>
-                        <li><Button startIcon={<FlagIcon />}>Tin của tôi</Button></li>
-                        <li><Button startIcon={<NotificationsIcon />}>Thông báo</Button></li>
-                        <li><Button startIcon={<EmailIcon />}>Tin nhắn</Button></li>
-                    </ul>
+            <div className="container">
+                <div className="logo">
+                    <img src="https://cdn.discordapp.com/attachments/1009450253537247274/1031370541375955034/vietsecond.jpg" ></img>
                 </div>
-
-                <div className="sub-nav">
-                    <div className="search">
-                        <div className="input-search">
-                            <input type="text" value={inputSearch} onChange={e => setInputSearch(e.target.value)} placeholder={placeholder} />
-                            <div><SearchIcon sx={{ fontSize: 30 }} /></div>
+                <div className="nav-container">
+                    <div className="nav">
+                        <ul>
+                            <li><Button startIcon={<HomeIcon />} onClick={()=>navigate("/")} >Trang chủ</Button></li>
+                            <li><Button startIcon={<LuggageIcon />}  onClick={()=>navigate("/inventory")} >Kho đồ</Button></li>
+                            <li><Button startIcon={<ShoppingBagIcon />} onClick={()=>navigate("/order")} >Đơn hàng</Button></li>
+                            <li><Button startIcon={<FlagIcon />} onClick={()=>navigate("/")} >Tin của tôi</Button></li>
+                            <li><Button startIcon={<NotificationsIcon />}>Thông báo</Button></li>
+                            <li><Button startIcon={<EmailIcon />} onClick={()=>navigate("/chat")} >Tin nhắn</Button></li>
+                        </ul>
+                    </div>
+                    <div className="sub-nav">
+                        <div className="search">
+                            <div className="input-search">
+                                <input type="text" value={inputSearch} onChange={e => setInputSearch(e.target.value)} placeholder={placeholder} />
+                                <div><SearchIcon sx={{ fontSize: 30 }} /></div>
+                            </div>
+                        </div>
+                        <div className="cash">
+                            <Button startIcon={<ShoppingCartIcon />} onClick={()=>navigate("/cart")} >Giỏ hàng</Button>
+                        </div>
+                        <div className="post">
+                            <Button variant="contained" startIcon={<PostAddIcon />} color="secondary" onClick={()=>navigate("/post")} >Đăng tin</Button>
                         </div>
                     </div>
-
-                    <div className="cash">
-                        <Button startIcon={<ShoppingCartIcon />}>Giỏ hàng</Button>
-                    </div>
-
-                    <div className="post">
-                        <Button variant="contained"startIcon={<PostAddIcon />}  color="secondary" >Đăng tin</Button>
-                    </div>
                 </div>
-
-
+                <div className="user">
+                    <Button variant="contained" startIcon={<AccountCircleIcon />} >Đăng nhập</Button>
+                </div>
             </div>
-
-            <div className="user">
-            <Button variant="contained"startIcon={<AccountCircleIcon />} >Đăng nhập</Button>
+            <div className="body">
+                <Outlet />
             </div>
-        </div>
-            <Home/>
         </div>
     );
 }

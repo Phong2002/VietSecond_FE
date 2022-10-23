@@ -99,3 +99,9 @@
     display: flex;
     align-items: center;
 }
+
+.body{
+    margin: 100px 15% 0 15%;
+    background-color: aliceblue;
+    height: 100%;
+}

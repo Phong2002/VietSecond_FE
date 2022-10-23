@@ -1,10 +1,11 @@
-import './fullScreen.css'
+import './FullScreen.css'
 import Header from '../header/Header.js'
+import { Outlet } from 'react-router-dom';
 
 function FullScreen() {
     return (
       <div className="fullScreen">
-       <Header/>
+        <Outlet/>
       </div>
     );
   }
