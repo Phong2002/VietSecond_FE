@@ -1,9 +1,17 @@
 import './Cart.css'
+import CartEmpty from './CartEmpty';
+import {
+    useNavigate
+} from "react-router-dom";
 
 function Cart() {
+    let navigate = useNavigate();
+
+
     return (
       <div className="cart-screen">
-       Cart
+       <CartEmpty navigateHome={() => navigate("/")} />
+       
       </div>
     );
   }

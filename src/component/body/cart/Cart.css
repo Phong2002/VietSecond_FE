@@ -1,0 +1,24 @@
+.cart-screen{
+
+}
+
+.cartempty-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+    
+}
+
+.cartempty-screen>img{
+    width: 200px;
+}
+
+.cartempty-screen>p{
+    margin: 20px;
+}
+
+.cartempty-screen .css-sghohy-MuiButtonBase-root-MuiButton-root{
+    background-color:#7ED958 !important ;
+}

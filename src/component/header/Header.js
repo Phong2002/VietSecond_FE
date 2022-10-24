@@ -16,10 +16,6 @@ import ClickAwayListener from '@mui/base/ClickAwayListener';
 import Notification from '../body/notification/Notification.js'
 import Box from '@mui/material/Box';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
     useNavigate
 } from "react-router-dom";
 
@@ -44,7 +40,7 @@ function Header() {
                             <li><Button startIcon={<HomeIcon />} onClick={() => navigate("/")} >Trang chủ</Button></li>
                             <li><Button startIcon={<LuggageIcon />} onClick={() => navigate("/inventory")} >Kho đồ</Button></li>
                             <li><Button startIcon={<ShoppingBagIcon />} onClick={() => navigate("/order")} >Đơn hàng</Button></li>
-                            <li><Button startIcon={<FlagIcon />} onClick={() => navigate("/")} >Tin của tôi</Button></li>
+                            <li><Button startIcon={<FlagIcon />} onClick={() => navigate("/news")} >Tin của tôi</Button></li>
                             <li className="noti">
                                 <ClickAwayListener onClickAway={()=>setIsOpenNoti(false)}>
                                     <Box><Button startIcon={<NotificationsIcon />} onClick={()=>setIsOpenNoti(!isOpenNoti)}>Thông báo</Button>

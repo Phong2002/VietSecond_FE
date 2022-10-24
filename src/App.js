@@ -9,6 +9,7 @@ import Chat from './component/body/chat/Chat';
 import Inventory from './component/body/inventory/Inventory.js'
 import Post from './component/body/post/Post.js'
 import Error from './component/error/Error.js'
+import News from './component/body/news/News.js'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="chat" element={<Chat />}></Route>
             <Route path="inventory" element={<Inventory />}></Route>
             <Route path="post" element={<Post />}></Route>
+            <Route path="news" element={<News />}></Route>
           </Route>
         </Route>
         <Route path="error" element={<Error />}></Route>
