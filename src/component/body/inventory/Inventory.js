@@ -2,10 +2,10 @@ import './Inventory.css'
 
 function Inventory() {
     return (
-      <div className="inventory-screen">
-       Inventory
-      </div>
+        <div className="inventory-screen">
+            Inventory
+        </div>
     );
-  }
-  
-  export default Inventory;
+}
+
+export default Inventory;

@@ -9,11 +9,11 @@ function Cart() {
 
 
     return (
-      <div className="cart-screen">
-       <CartEmpty navigateHome={() => navigate("/")} />
-       
-      </div>
+        <div className="cart-screen">
+            <CartEmpty navigateHome={() => navigate("/")}/>
+
+        </div>
     );
-  }
-  
-  export default Cart;
+}
+
+export default Cart;

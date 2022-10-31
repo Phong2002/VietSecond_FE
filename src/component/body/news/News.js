@@ -2,10 +2,10 @@ import './News.css'
 
 function News() {
     return (
-      <div className="News-screen">
-       News
-      </div>
+        <div className="News-screen">
+            News
+        </div>
     );
-  }
-  
-  export default News;
+}
+
+export default News;

@@ -1,9 +1,10 @@
 import './Notification.css'
+
 function Notification() {
     return (
-      <div className="notification">
-      </div>
+        <div className="notification">
+        </div>
     );
-  }
-  
-  export default Notification;
+}
+
+export default Notification;

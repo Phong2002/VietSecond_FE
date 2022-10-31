@@ -2,10 +2,10 @@ import './Order.css'
 
 function Order() {
     return (
-      <div className="order-screen">
-       Order
-      </div>
+        <div className="order-screen">
+            Order
+        </div>
     );
-  }
-  
-  export default Order;
+}
+
+export default Order;
