@@ -21,4 +21,5 @@
 
 .cartempty-screen .css-sghohy-MuiButtonBase-root-MuiButton-root {
     background-color: #7ED958 !important;
+    position:unset
 }
