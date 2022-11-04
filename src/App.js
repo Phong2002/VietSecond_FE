@@ -10,6 +10,7 @@ import Inventory from './component/body/inventory/Inventory.js'
 import Post from './component/body/post/Post.js'
 import Error from './component/error/Error.js'
 import News from './component/body/news/News.js'
+import Login from './component/body/login/Login.js'
 
 function App() {
     return (
@@ -24,6 +25,8 @@ function App() {
                         <Route path="inventory" element={<Inventory/>}></Route>
                         <Route path="post" element={<Post/>}></Route>
                         <Route path="news" element={<News/>}></Route>
+                        <Route path="login" element={<Login/>}></Route>
+
                     </Route>
                 </Route>
                 <Route path="error" element={<Error/>}></Route>
