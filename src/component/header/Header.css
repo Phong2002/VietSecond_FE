@@ -17,7 +17,7 @@
     right: 0;
 }
 
-.logo > img {
+.logo>img {
     height: 100%
 }
 
@@ -27,17 +27,22 @@
     justify-content: space-evenly
 }
 
-.nav-container > .nav > ul {
+.nav-container>.nav>ul {
     display: flex;
     flex-direction: row;
 }
 
-.nav-container > .nav > ul {
+.nav-container>.nav>ul {
     list-style-type: none;
 }
 
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-    color: black !important
+.nav-container .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: black !important;
+}
+
+
+.nav-container .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: #95ff68 !important;
 }
 
 .input-search {
@@ -45,7 +50,7 @@
     flex-direction: row;
 }
 
-.input-search > input {
+.input-search>input {
     width: 400px;
     height: 40px;
     border-radius: 10px;
@@ -56,7 +61,7 @@
     font-size: 16px;
 }
 
-.input-search > div {
+.input-search>div {
     background: white;
     display: flex;
     align-items: center;
@@ -67,25 +72,22 @@
     color: #7ED958;
 }
 
-.input-search > input:focus {
+.input-search>input:focus {
     outline: none;
 }
 
-.input-search > div:hover {
+.input-search>div:hover {
     cursor: pointer;
 }
 
-.input-search > div:hover > svg {
+.input-search>div:hover>svg {
     font-size: 35px;
-
 }
 
 .sub-nav {
     display: flex;
     flex-direction: row
 }
-
-
 
 .post .css-zcbmsk-MuiButtonBase-root-MuiButton-root {
     background-color: yellow;
@@ -97,17 +99,70 @@
     color: black
 }
 
-.container > .user {
+.container>.user {
     display: flex;
     align-items: center;
 }
 
 .body {
-    margin: 100px 15% 0 15%;
+    margin: 0 15% 0 15%;
     background-color: aliceblue;
     height: 100%;
+    padding-top: 100px;
 }
 
 .nav li.noti {
     position: relative;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.user-container>.fullname {
+    padding: 10px 10px;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    color: black !important;
+}
+
+.user-container .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: black !important;
+    text-transform: none !important;
+}
+
+.user-container>.fullname:hover {
+    cursor: pointer;
+
+}
+
+.sub-button-user {
+    width: 150px;
+    padding: 15px 8px;
+    background-color: #93ea6e;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    border-radius: 4px;
+    border:1px solid rgb(7, 120, 22) ;
+    border-top: none !important;
+
+}
+
+.sub-button-user>ul {
+    list-style: none;
+}
+
+.sub-button-user .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    width: 100%;
+    border-bottom: 1px dashed black;
+}
+
+.sub-button-user .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+    background-color: rgb(129, 249, 113) !important;
+    border-bottom: 1px solid black;
 }

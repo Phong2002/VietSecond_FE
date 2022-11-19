@@ -11,6 +11,10 @@ import Post from './component/body/post/Post.js'
 import Error from './component/error/Error.js'
 import News from './component/body/news/News.js'
 import Login from './component/body/login/Login.js'
+import ForgotPassword from './component/body/login/ForgotPassword.js'
+import UpdatePasswordForgot from './component/body/login/UpdatePasswordForgot.js'
+import Active from './component/body/login/Active.js'
+import Register from './component/body/login/Register.js'
 
 function App() {
     return (
@@ -26,10 +30,14 @@ function App() {
                         <Route path="post" element={<Post/>}></Route>
                         <Route path="news" element={<News/>}></Route>
                         <Route path="login" element={<Login/>}></Route>
-
+                        <Route path="forgot-password" element={<ForgotPassword/>}></Route>
+                        <Route path="register" element={<Register/>}></Route>
                     </Route>
                 </Route>
                 <Route path="error" element={<Error/>}></Route>
+                <Route path="verification/:token" element={<Active/>}></Route>
+                <Route path="reset-password/:token" element={<UpdatePasswordForgot/>}></Route>
+                
             </Routes>
         </div>
     );

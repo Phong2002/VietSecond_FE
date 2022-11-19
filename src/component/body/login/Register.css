@@ -1,0 +1,104 @@
+.Register{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center
+}
+.Register-container{
+    width: 600px;
+    background-color:white;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    height: 620px;
+    flex-direction: column;
+    padding:10px;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06), 0 8px 15px rgba(0, 0, 0, 0.12);
+   
+}
+
+.Register-container-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly
+}
+
+
+.Register-container-header-title{
+    display: flex;
+    flex-direction: column;
+}
+.Register-container-header>img{
+    width:80px;
+}
+.Register-container-header-title>h2{
+    color:rgb(16, 176, 16);
+}
+.Register-container-header-title>p{
+   
+    color:rgb(82, 114, 90)
+}
+
+.Register-container-body{
+    width: 100%;
+}
+
+.row-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 65px;
+}
+
+.Register-container-body .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root.Mui-error,.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+    top:-7px !important;
+}
+
+.Register-container-body .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+    height:40px !important;
+}
+
+.Register-container-body  .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+    width: 222px!important;
+}
+
+.row-3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding:0 40px;
+    height: 65px;
+    justify-content: space-evenly
+}
+
+.row-1{
+    padding:0 45px;
+    width: 100%;
+    line-height: 65px;
+  
+}
+
+.Register-container-body .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill{
+    padding:0 15px!important;
+}
+
+.Register-container-body .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill{
+
+height:40px;
+}
+
+.row-1 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    height:40px
+    
+}
+
+.row-1 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+    width: 100% !important;
+}
+.row-1 .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 0 15px !important;
+}

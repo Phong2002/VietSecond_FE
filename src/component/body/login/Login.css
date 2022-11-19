@@ -1,0 +1,166 @@
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.12);
+  background-color: #f2f8ff;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.button:hover, .button:focus {
+  transition: 0.15s ease-in-out;
+}
+
+.login-container > img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.login-container {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:  auto;
+  margin-top: 40px;
+  background-color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06), 0 8px 15px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+.login-container .title {
+  text-transform: capitalize;
+  font-size: 1.6em;
+  font-weight: 300;
+  padding: 60px 0;
+  padding-bottom: 10px;
+}
+.login-container .login-button {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 60%;
+  padding: 20px 15px;
+  background-color: #3fbe56;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.login-container .login-button:hover, .login-container .login-button:focus {
+  box-shadow: 0px 3px 5px 3px #209235;
+  background-color:#3fbe56;
+
+}
+
+.fluid-input {
+  width: 80%;
+  height: 50px;
+  max-width: 450px;
+  position: relative;
+}
+.fluid-input-bg {
+  width: calc(100% - 10%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  color: #00b44b;
+  font-weight: 400;
+  font-size: 0.9em;
+  transition: 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+.fluid-input-holder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  will-change: transform, box-shadow;
+  transition: 0.2s ease-in-out;
+  background-color: #f1f3f4;
+}
+.fluid-input-input {
+  width: inherit;
+  height: inherit;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #f1f3f4;
+  font-size: 1.05em;
+  padding: 0 5%;
+}
+.fluid-input-input:focus {
+  outline: None;
+}
+.fluid-input-label {
+  width: calc(100% - 10%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  position: absolute;
+  font-size: 1em;
+  left: 5%;
+  top: 0;
+  color: #00b44b;
+  font-weight: 400;
+  text-transform: capitalize;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out, font-size 0.2s 0.15s ease-in-out;
+  will-change: transform, font-size;
+}
+.fluid-input--focus .fluid-input-holder {
+  box-shadow: 0px 5px 20px 0px rgba(88, 207, 86, 0.3);
+}
+.fluid-input--focus .fluid-input-bg {
+  transform: translateY(-40px);
+  transition: 0.2s 0.2s ease-in-out;
+}
+.fluid-input--focus .fluid-input-label {
+  transform: translateY(-40px);
+}
+.fluid-input--open .fluid-input-label {
+  transform: translateY(-40px);
+}
+.message-login{
+  color:red;
+  line-height: 22px;
+}
+.padding-22{
+  margin:11px 0;
+}
+.forgotPassword{
+  font-size:14px;
+  color:gray;
+  -webkit-user-select: none;
+  user-select: none;
+  float:left;
+}
+
+.forgotPassword:hover{
+  cursor: pointer;
+  color:black;
+}
+
+.signin{
+  margin: 20px 0;
+}
