@@ -27,8 +27,6 @@ import SubButtonUser from './SubButtonUser.js'
 function Header() {
     const dispatch = useDispatch();
     const [nav, setNav] = useState('')
-    const [inputSearch, setInputSearch] = useState('')
-    const [placeholder, setPlaceholder] = useState('Tất cả danh mục')
     const [isOpenNoti, setIsOpenNoti] = useState(false)
     let navigate = useNavigate();
     const isLogin = useSelector(selectStateLogin)
@@ -52,40 +50,36 @@ function Header() {
                         src="https://cdn.discordapp.com/attachments/1009450253537247274/1031370541375955034/vietsecond.jpg"></img>
                 </div>
                 <div className="nav-container">
+                    
                     <div className="nav">
                         <ul>
                             <li><Button startIcon={<HomeIcon />} onClick={() => navigate("/")}>Trang chủ</Button></li>
-                            <li><Button startIcon={<LuggageIcon />} onClick={() => navigate("/inventory")}>Kho
-                                đồ</Button></li>
-                            <li><Button startIcon={<ShoppingBagIcon />} onClick={() => navigate("/order")}>Đơn
-                                hàng</Button></li>
-                            <li><Button startIcon={<FlagIcon />} onClick={() => navigate("/news")}>Tin của tôi</Button>
+                            <li></li>
+                            <li></li>
+                            <li><Button startIcon={<FlagIcon />} onClick={() => navigate("/news")}disabled={!isLogin}>Tin của tôi</Button>
                             </li>
                             <li className="noti">
                                 <ClickAwayListener onClickAway={() => setIsOpenNoti(false)}>
                                     <Box><Button startIcon={<NotificationsIcon />}
-                                        onClick={() => setIsOpenNoti(!isOpenNoti)}>Thông báo</Button>
+                                        onClick={() => setIsOpenNoti(!isOpenNoti)} disabled={!isLogin}>Thông báo</Button>
                                         {isOpenNoti ? <Notification /> : null}</Box>
                                 </ClickAwayListener>
                             </li>
-                            <li><Button startIcon={<EmailIcon />} onClick={() => navigate("/chat")}>Tin nhắn</Button>
+                            <li><Button startIcon={<EmailIcon />} onClick={() => navigate("/chat")}disabled={!isLogin}>Tin nhắn</Button>
                             </li>
                         </ul>
                     </div>
                     <div className="sub-nav">
-                        <div className="search">
-                            <div className="input-search">
-                                <input type="text" value={inputSearch} onChange={e => setInputSearch(e.target.value)}
-                                    placeholder={placeholder} />
-                                <div><SearchIcon sx={{ fontSize: 30 }} /></div>
-                            </div>
-                        </div>
+                    <Button startIcon={<LuggageIcon />} onClick={() => navigate("/inventory")} disabled={!isLogin}>Kho
+                                đồ</Button>
+                                <Button startIcon={<ShoppingBagIcon />} onClick={() => navigate("/order")}disabled={!isLogin}>Đơn
+                                hàng</Button>
                         <div className="cash">
-                            <Button startIcon={<ShoppingCartIcon />} onClick={() => navigate("/cart")}>Giỏ hàng</Button>
+                            <Button startIcon={<ShoppingCartIcon />} onClick={() => navigate("/cart")}disabled={!isLogin}>Giỏ hàng</Button>
                         </div>
                         <div className="post">
                             <Button variant="contained" startIcon={<PostAddIcon />} color="secondary"
-                                onClick={() => navigate("/post")}>Đăng tin</Button>
+                                onClick={() => navigate("/post")}disabled={!isLogin}>Đăng tin</Button>
                         </div>
                     </div>
                 </div>
@@ -108,6 +102,7 @@ function Header() {
             <div className="body">
                 <Outlet />
             </div>
+            <div className="footer">footer</div>
         </div>
     );
 }

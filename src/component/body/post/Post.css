@@ -1,0 +1,129 @@
+.css-mm4ce0{
+    padding: 0!important;
+    border-radius: 1px!important;
+    border: none !important;
+}
+
+.post-body{
+    display: flex;
+}
+
+.post-image{
+    width:30%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding:20px
+}
+
+.post-infor{
+    width:70%;
+    height:100%;
+    padding:20px
+}
+
+.post-infor .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    width: 100%;
+}
+
+.post-infor  .full-with{
+    width: 100%;
+    line-height:65px;
+    margin:5px 0
+}
+
+.post-body .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input ,.post-body .css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input{
+    padding:10px !important;
+}
+
+.post-body .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    padding:10px !important;
+}
+
+.post-body .row-3{
+   padding: 0;
+   justify-content: space-between
+}
+
+.post-body .row-3 .css-5t43np{
+    width:220px
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    text-align: center;
+    color: rgb(20, 179, 20);
+    width: 100px;
+    height:100px;
+    content: 'Thêm ảnh';
+    display: inline-block;
+    background: rgb(217, 217, 217);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    border: 2px rgb(33, 205, 33) dashed;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 13pt;
+    line-height: 100px;
+    white-space: nowrap;
+  }
+  .custom-file-input:hover::before {
+    border:2px rgb(33, 205, 33) solid
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+  
+  input[type='file'] {
+    padding-left: 133px;
+    color: rgba(0, 0, 0, 0)
+  }
+
+  .list-image-post{
+    position:relative;
+    width: 120px;
+    line-height:140px;
+  }
+
+  .list-image-post img{
+    width: 120px;
+    object-fit: cover;
+    height:120px;
+  }
+
+  .list-image-post .delete-image-post{
+    position:absolute;
+    top: -52px;
+    right: -12px;
+  }
+
+  .list-image-post .delete-image-post:hover{
+    cursor: pointer;
+  }
+
+  .post-list-image{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+.button-submit{
+    width:100%;
+    text-align: center;
+}
+
+.total-image{
+  display:block;
+  text-align: center;
+  margin: 10px;
+}

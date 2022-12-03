@@ -7,14 +7,14 @@
     display: flex;
     flex-direction: row;
     height: 100px;
-    justify-content: space-evenly;
     background-color: #7ED958;
-    padding: 0 15%;
+    padding-left:250px;
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 }
 
 .logo>img {
@@ -54,11 +54,12 @@
     width: 400px;
     height: 40px;
     border-radius: 10px;
-    border: 0px solid;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     padding: 0 15px;
     font-size: 16px;
+    border:2px solid rgb(190, 190, 190);
+    border-right: none;
 }
 
 .input-search>div {
@@ -70,6 +71,8 @@
     padding: 0 10px;
     width: 50px;
     color: #7ED958;
+    border:2px solid rgb(190, 190, 190);
+    border-left: none;
 }
 
 .input-search>input:focus {
@@ -86,7 +89,8 @@
 
 .sub-nav {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .post .css-zcbmsk-MuiButtonBase-root-MuiButton-root {
@@ -106,7 +110,7 @@
 
 .body {
     margin: 0 15% 0 15%;
-    background-color: aliceblue;
+    background-color: rgb(253, 247, 255);
     height: 100%;
     padding-top: 100px;
 }
@@ -165,4 +169,17 @@
 .sub-button-user .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
     background-color: rgb(129, 249, 113) !important;
     border-bottom: 1px solid black;
+}
+
+.body{
+   min-height: 100vh;
+}
+.footer{
+    border-top: 10px solid rgb(206, 206, 206);
+    background-color:rgb(242, 242, 242);
+    height: 100px
+}
+
+.nav,.nav-container,.user{
+    padding: 0 20px;
 }

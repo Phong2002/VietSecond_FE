@@ -1,9 +1,9 @@
 .fullScreen {
-    height: 100%;
     width: 100%;
-    background-image: url("https://img.freepik.com/free-vector/green-curve-frame-template-vector_53876-144370.jpg?w=2000");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    height: 100%;
+    background-image: url("https://bizweb.dktcdn.net/100/270/285/themes/880332/assets/bg-special3.png?1664347779027&fbclid=IwAR2QZYNNSBl1ati-BLVzVw3RCgNJoClYrt-e-9NRi7MbYREvJFbRH7scXds");
+    background-size: 1500px;
+    background-repeat: repeat;
+
+    background-color: #9ed5a2;
 }

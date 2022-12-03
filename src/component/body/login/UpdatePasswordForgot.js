@@ -42,7 +42,7 @@ function UpdatePasswordForgot() {
 
     const params = useParams();
     const [backdrop,setBackdrop] = useState(false)
-    const [dialog,setDialog] = useState(true)
+    const [dialog,setDialog] = useState(false)
 
     const handleChangePassword = (event) => {
         setMess_password("")
@@ -208,8 +208,6 @@ function UpdatePasswordForgot() {
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
                         <p className="dialog-message"> Giờ đây bạn có thể sử dụng mật khẩu mới này để đăng nhập vào hệ thống của VietSecond rồi !</p>
-                      
-                       
                         <p className="dialog-sig" ><i><b>Trân trọng,</b></i></p>
                         <p className="dialog-sig color"><i><b>VietSecond</b></i></p>
                     </DialogContentText>
